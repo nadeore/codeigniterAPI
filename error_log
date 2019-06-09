@@ -1,0 +1,148 @@
+[06-Sep-2017 07:55:50 UTC] PHP Fatal error:  Call to undefined function php_info() in /home/leoinfotech91/public_html/api.tattleup/index.php on line 3
+[07-Sep-2017 09:38:34 UTC] PHP Fatal error:  Call to a member function login() on null in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 34
+[07-Sep-2017 11:00:12 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::last_inserted_id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 47
+[07-Sep-2017 12:57:58 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::result_row() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 67
+[07-Sep-2017 12:58:13 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_result::result_rows() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 67
+[07-Sep-2017 13:04:27 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 75
+[07-Sep-2017 13:05:20 UTC] PHP Parse error:  syntax error, unexpected ''contact_number'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 75
+[08-Sep-2017 13:08:52 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 182
+[28-Sep-2017 06:34:02 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/leoinfotech91/public_html/api.tattleup/application/views/admin/login.php on line 10
+[28-Sep-2017 06:34:06 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/leoinfotech91/public_html/api.tattleup/application/views/admin/login.php on line 10
+[28-Sep-2017 06:38:29 UTC] PHP Fatal error:  Call to undefined function base_url() in /home/leoinfotech91/public_html/api.tattleup/application/views/admin/login.php on line 10
+[29-Sep-2017 11:04:43 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 273
+[29-Sep-2017 11:04:43 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 273
+[29-Sep-2017 11:04:51 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 273
+[29-Sep-2017 11:05:11 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 273
+[29-Sep-2017 11:05:53 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 273
+[29-Sep-2017 11:05:54 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 273
+[29-Sep-2017 11:05:55 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/leoinfotech91/public_html/api.tattleup/application/controllers/api/Version1.php on line 273
+[30-Sep-2017 12:34:28 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::update_id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 12:36:14 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::update_id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 12:36:33 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 12:40:46 UTC] PHP Fatal error:  Call to undefined function Id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 12:41:15 UTC] PHP Fatal error:  Call to undefined function id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 13:07:16 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::upddata() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 55
+[30-Sep-2017 13:15:20 UTC] PHP Fatal error:  Call to a member function where() on string in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 13:17:36 UTC] PHP Fatal error:  Call to a member function where() on string in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 13:17:57 UTC] PHP Fatal error:  Call to a member function where() on string in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[30-Sep-2017 13:18:01 UTC] PHP Fatal error:  Call to a member function where() on string in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 56
+[03-Oct-2017 08:50:22 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::update_id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 09:33:48 UTC] PHP Fatal error:  Call to undefined method CI_DB_mysqli_driver::update_id() in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 57
+[03-Oct-2017 10:06:36 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:06:57 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:06:59 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:07:00 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:07:41 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:07:42 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:08:18 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:08:19 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[03-Oct-2017 10:11:45 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/api.tattleup/application/models/api/Version1_model.php on line 58
+[12-Oct-2017 13:41:09 UTC] PHP Parse error:  syntax error, unexpected 'EmployeeName' (T_STRING), expecting ')' in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 239
+[12-Oct-2017 14:06:07 UTC] PHP Parse error:  syntax error, unexpected 'EmployeeName' (T_STRING), expecting ')' in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 239
+[12-Oct-2017 14:06:08 UTC] PHP Parse error:  syntax error, unexpected 'EmployeeName' (T_STRING), expecting ')' in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 239
+[12-Oct-2017 14:20:55 UTC] PHP Parse error:  syntax error, unexpected 'EmployeeName' (T_STRING), expecting ')' in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 239
+[14-Oct-2017 09:27:46 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/leoinfotech91/public_html/sa4i/application/config/autoload.php on line 145
+[14-Oct-2017 10:36:58 UTC] PHP Fatal error:  Call to a member function base() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/admin/Login.php on line 90
+[15-Oct-2017 21:05:51 UTC] PHP Fatal error:  Call to a member function view() on null in /home/leoinfotech91/public_html/sa4i/application/views/admin/companies/detail_view.php on line 32
+[15-Oct-2017 21:17:09 UTC] PHP Fatal error:  Call to a member function view() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/admin/Companies.php on line 182
+[15-Oct-2017 21:17:42 UTC] PHP Fatal error:  Call to a member function view() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/admin/Companies.php on line 182
+[15-Oct-2017 22:25:55 UTC] PHP Parse error:  syntax error, unexpected '==' (T_IS_EQUAL) in /home/leoinfotech91/public_html/sa4i/application/views/admin/companies/grid_view.php on line 75
+[16-Oct-2017 20:00:58 UTC] PHP Fatal error:  Call to a member function load_page() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 96
+[16-Oct-2017 20:01:00 UTC] PHP Fatal error:  Call to a member function load_page() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 96
+[16-Oct-2017 20:30:24 UTC] PHP Fatal error:  Call to a member function load_page() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 96
+[16-Oct-2017 20:31:59 UTC] PHP Fatal error:  Call to a member function load_page() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 96
+[16-Oct-2017 20:32:00 UTC] PHP Fatal error:  Call to a member function load_page() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 96
+[16-Oct-2017 20:32:17 UTC] PHP Fatal error:  Call to a member function load_page() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 96
+[01-Nov-2017 15:59:40 UTC] PHP Fatal error:  Call to undefined method Template::base() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 49
+[03-Nov-2017 16:01:41 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/leoinfotech91/public_html/sa4i/application/models/Workers_model.php on line 30
+[03-Nov-2017 16:01:43 UTC] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home/leoinfotech91/public_html/sa4i/application/models/Workers_model.php on line 30
+[04-Nov-2017 21:02:58 UTC] PHP Fatal error:  Call to undefined method Template::base() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 49
+[12-Dec-2017 11:17:24 UTC] PHP Parse error:  syntax error, unexpected ''wordwrap'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/leoinfotech91/public_html/sa4i/application/controllers/admin/Machines.php on line 469
+[27-Dec-2017 11:33:29 UTC] PHP Fatal error:  Call to a member function result_array() on null in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 172
+[04-Jan-2018 07:34:18 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[05-Jan-2018 07:55:39 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 187
+[05-Jan-2018 07:56:36 UTC] PHP Fatal error:  Call to undefined function NOW() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 187
+[05-Jan-2018 10:01:28 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 110
+[05-Jan-2018 10:06:35 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 110
+[05-Jan-2018 10:07:27 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 110
+[05-Jan-2018 10:18:26 UTC] PHP Fatal error:  Cannot use object of type stdClass as array in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 185
+[05-Jan-2018 12:44:36 UTC] PHP Fatal error:  Call to a member function result_array() on null in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 91
+[05-Jan-2018 12:45:09 UTC] PHP Fatal error:  Call to a member function result_array() on null in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 91
+[05-Jan-2018 12:45:11 UTC] PHP Fatal error:  Call to a member function result_array() on null in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 91
+[06-Jan-2018 07:07:21 UTC] PHP Fatal error:  Call to a member function result_array() on string in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 72
+[24-Feb-2018 11:45:52 UTC] PHP Fatal error:  Call to undefined method Template::base() in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 91
+[24-Feb-2018 11:46:01 UTC] PHP Fatal error:  Call to undefined method Template::base() in /home/leoinfotech91/public_html/sa4i/application/controllers/Login.php on line 91
+[26-Feb-2018 09:50:42 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[27-Feb-2018 05:10:37 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Mar-2018 07:44:33 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Mar-2018 19:24:04 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[08-Mar-2018 12:57:04 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[08-Mar-2018 12:57:07 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[08-Mar-2018 12:57:09 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[09-Mar-2018 09:28:59 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[09-Mar-2018 09:34:27 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[09-Mar-2018 10:15:06 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[09-Mar-2018 10:15:13 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[09-Mar-2018 10:15:18 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[09-Mar-2018 10:17:34 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[09-Mar-2018 10:17:55 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[09-Mar-2018 10:18:19 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[09-Mar-2018 10:34:15 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[09-Mar-2018 11:17:30 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[09-Mar-2018 12:51:03 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[10-Mar-2018 09:56:57 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[10-Mar-2018 13:05:27 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[10-Mar-2018 13:17:19 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[10-Mar-2018 13:20:40 UTC] PHP Fatal error:  Call to undefined method Workers_model::delete_by_id() in /home/leoinfotech91/public_html/sa4i/application/controllers/Workers.php on line 299
+[12-Mar-2018 12:17:36 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[12-Mar-2018 12:19:29 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[12-Mar-2018 12:19:34 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[17-Mar-2018 10:04:33 UTC] PHP Fatal error:  Call to undefined method version1_model::machine_book() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 213
+[17-Mar-2018 10:04:36 UTC] PHP Fatal error:  Call to undefined method version1_model::machine_book() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 213
+[21-Mar-2018 06:02:41 UTC] PHP Fatal error:  Call to undefined method version1_model::machine_book() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 213
+[21-Mar-2018 06:02:55 UTC] PHP Fatal error:  Call to undefined method version1_model::machine_book() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 213
+[21-Mar-2018 07:03:44 UTC] PHP Fatal error:  Call to undefined method version1_model::machine_book() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 213
+[21-Mar-2018 07:04:10 UTC] PHP Fatal error:  Call to undefined method version1_model::machine_book() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 213
+[22-Mar-2018 07:40:22 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[24-Mar-2018 12:08:12 UTC] PHP Fatal error:  Call to undefined method version1_model::BookMachine() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 133
+[24-Mar-2018 12:09:20 UTC] PHP Fatal error:  Call to undefined method version1_model::BookMachine() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 133
+[26-Mar-2018 05:25:12 UTC] PHP Fatal error:  Call to undefined method version1_model::BookMachine() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 133
+[26-Mar-2018 05:57:25 UTC] PHP Fatal error:  Call to undefined method version1_model::BookMachine() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 133
+[31-Mar-2018 07:45:11 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[31-Mar-2018 07:50:33 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[31-Mar-2018 07:51:28 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[31-Mar-2018 10:34:53 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[02-Apr-2018 05:25:44 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[06-Apr-2018 06:57:19 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[06-Apr-2018 12:07:00 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[06-Apr-2018 12:59:40 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 04:56:57 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:34:49 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:34:55 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:34:58 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:35:04 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:35:57 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:35:58 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:36:01 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:36:09 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:36:19 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:36:19 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:36:19 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:36:19 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:36:19 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:43:25 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:43:26 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:43:28 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:48:11 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:53:58 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:54:06 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:58:32 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:58:33 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:58:34 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:58:34 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:58:34 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[07-Apr-2018 12:58:34 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[11-Apr-2018 12:30:25 UTC] PHP Fatal error:  Call to a member function result_array() on string in /home/leoinfotech91/public_html/sa4i/application/models/api/Version1_model.php on line 38
+[12-Apr-2018 10:06:08 UTC] PHP Fatal error:  Call to undefined function returnFailedResponse() in /home/leoinfotech91/public_html/sa4i/application/controllers/Machines.php on line 29
+[18-Apr-2018 06:33:41 UTC] PHP Fatal error:  Call to undefined function CURTIME() in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 332
+[18-Apr-2018 07:19:54 UTC] PHP Fatal error:  Call to a member function setTimezone() on null in /home/leoinfotech91/public_html/sa4i/application/controllers/api/Version1.php on line 330

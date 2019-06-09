@@ -1,0 +1,431 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class login extends CI_Controller {
+
+	/*
+ * Filename	: version1.php
+ * projectname  : tattleup
+ * Date created : September 07,2017
+ * Created by   : Vishal Chaturvedi
+ * Purpose      : This controller file will contain all the functions needed for api 
+ */
+	 
+	public function __construct() {
+        parent::__construct();
+       //$this->load->model('api/version1_model');
+    }
+
+	/*
+     * Methodname:  index
+     * Date created: September 07,2017
+	 * Created by   : Vishal Chaturvedi
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	 
+	public function index()
+	{-	
+		$this->load->view('admin/login');
+	}
+	
+	// Check for user login process
+public function user_login_process() {
+
+$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
+$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean');
+
+if ($this->form_validation->run() == FALSE) {
+if(isset($this->session->userdata['logged_in'])){
+$this->load->view('admin_page');
+}else{
+$this->load->view('login_form');
+}
+} else {
+$data = array(
+'username' => $this->input->post('username'),
+'password' => $this->input->post('password')
+);
+$result = $this->login_database->login($data);
+if ($result == TRUE) {
+
+$username = $this->input->post('username');
+$result = $this->login_database->read_user_information($username);
+if ($result != false) {
+$session_data = array(
+'username' => $result[0]->user_name,
+'email' => $result[0]->user_email,
+);
+// Add user data in session
+$this->session->set_userdata('logged_in', $session_data);
+$this->load->view('admin_page');
+}
+} else {
+$data = array(
+'error_message' => 'Invalid Username or Password'
+);
+$this->load->view('login_form', $data);
+}
+}
+}
+	public function log()
+	{
+		$this->load->view('admin/login');
+	}
+	/*
+     * Methodname:  registration
+     * Date created: September 07,2017
+	 * Created by   : Vishal Chaturvedi
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	public function registration(){
+		
+		if ($this->input->get_post('fbUsername') && $this->input->get_post('fbUserid')) {
+			$ret = $this->version1_model->registration($this->input->get_post('fbUserid'),$this->input->get_post('fbUsername'));
+                        
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success","userId"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not saved");
+			}
+			
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		
+		echo json_encode($response);
+	}
+	
+	/*
+     * Methodname:  login
+     * Date created: September 07,2017
+	 * Created by   : Vishal Chaturvedi
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	public function login(){
+		//$this->output->enable_profiler(TRUE);
+
+		if ($this->input->get_post('fbUsername') && $this->input->get_post('fbUserid')) {
+			$ret = $this->version1_model->login($this->input->get_post('fbUserid'),$this->input->get_post('fbUsername'));
+                       //$ret = $this->version1_model->login('1626559317374638','Anurag Harod');
+			if($ret){
+				if($ret->ContactNo){
+					$isRigisterMobile = true;
+				}else{
+					$isRigisterMobile = false;
+				}
+				$userid = $ret->Id;
+				$response = array("status"=>true,"message"=>"Success","isRigisterMobile"=>$isRigisterMobile,"userList"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not found");
+			}
+			
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		echo json_encode($response);
+	}
+	
+	/*
+     * Methodname:  otpGeneration
+     * Date created: September 07,2017
+	 * Created by   : Vishal Chaturvedi
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	public function otpGeneration(){
+		//$this->output->enable_profiler(TRUE);
+
+		if ($this->input->get_post('userid') && $this->input->get_post('mobile')) {
+			
+			$otp = mt_rand(100000, 999999);
+			
+			//Your authentication key
+			$authKey = "88858AS1nNqpQn55e85654";
+
+			//Multiple mobiles numbers separated by comma
+			$mobileNumber = $this->input->get_post('mobile');
+
+			//Sender ID,While using route4 sender id should be 6 characters long.
+			$senderId = "MSGIND";
+
+			//Your message to send, Add URL encoding here.
+			$message = urlencode("Your OTP is $otp");
+
+			//Define route 
+			$route = "default";
+			//Prepare you post parameters
+			$postData = array(
+				'authkey' => $authKey,
+				'mobiles' => $mobileNumber,
+				'message' => $message,
+				'sender' => $senderId,
+				'otp' => $otp
+			);
+
+			//API URL
+			$url="http://api.msg91.com/api/sendotp.php";
+
+			// init the resource
+			$ch = curl_init();
+			curl_setopt_array($ch, array(
+			CURLOPT_URL => $url,
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_POST => true,
+			CURLOPT_POSTFIELDS => $postData
+			//,CURLOPT_FOLLOWLOCATION => true
+			));
+
+
+			//Ignore SSL certificate verification
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+
+			//get response
+			$output = curl_exec($ch);
+
+			//Print error if any
+			if(curl_errno($ch))
+			{
+				//echo 'error:' . curl_error($ch);
+			}
+
+			curl_close($ch);
+
+			$resArr = json_decode($output);
+			
+			if($resArr->type == 'success'){
+					$response = array("status"=>true,"message"=>"Success","otp"=>$otp,"userid"=>$this->input->get_post('userid'));
+			}else{
+					$response = array("status"=>false,"message"=>"Mobile number not correct");
+			}
+			
+			
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		echo json_encode($response);
+	}
+	
+	/*
+     * Methodname:  setProfile
+     * Date created: September 08,2017
+	 * Created by   : Vishal Chaturvedi
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	public function setProfile(){
+		
+		if ($this->input->get_post('userid') && $this->input->get_post('gender') && $this->input->get_post('mobile')&& $this->input->get_post('email')&& $this->input->get_post('anonymous_status')) {
+			$ret = $this->version1_model->setProfile($this->input->get_post('userid'),$this->input->get_post('mobile'),$this->input->get_post('email'));
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success","userid"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not saved");
+			}
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		
+		echo json_encode($response);
+	}
+	
+	/*
+     * Methodname:  getProfile
+     * Date created: September 07,2017
+	 * Created by   : Vishal Chaturvedi 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	public function getProfile(){
+		if ($this->input->get_post('userid')) {
+			$ret = $this->version1_model->getProfile($this->input->get_post('userid'));
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success","userid"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not found");
+			}
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		echo json_encode($response);	
+	}
+        
+        /*
+     * Methodname:  getCategories
+     * Date created: September 27,2017
+	 * Created by   : Monika Kumari 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	public function getCategories(){
+           // if ($this->input->get_post('categoriesList')) {
+            $ret = $this->version1_model->getCategories();
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success","categoriesList"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not found");
+			}
+//		}else{
+//			$response = array("status"=>false,"message"=>"Required parameter not found");
+//		}
+		echo json_encode($response);	
+	}
+        
+             /*
+     * Methodname:  getSubCategories
+     * Date created: September 27,2017
+	 * Created by   : Monika Kumari 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+	public function getSubCategories(){
+           if ($this->input->get_post('categoryid')) {
+            $ret = $this->version1_model->getSubCategories($this->input->get_post('categoryid'));
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success","SubcategoriesList"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not found");
+			}
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		echo json_encode($response);	
+	}
+        /*
+     * Methodname:  createTattle
+     * Date created: September 27,2017
+	 * Created by   : Monika Kumari 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+        
+        public function createTattle(){
+		
+		if ($this->input->get_post('locality') || $this->input->get_post('title') || $this->input->get_post('description') || $this->input->get_post('subcategoryId') || $this->input->get_post('categoryId')|| $this->input->get_post('userId')|| $this->input->get_post('anonymousStatus')) {
+			//$ret = $this->version1_model->createTattle('pune','Education','Education Problem','1','1','1','0');
+                        $ret = $this->version1_model->createTattle($this->input->get_post('locality') , $this->input->get_post('title') , $this->input->get_post('description') , $this->input->get_post('subcategoryId') , $this->input->get_post('categoryId') , $this->input->get_post('userId') , $this->input->get_post('anonymousStatus'));
+                       // echo $ret;
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success");
+			}else{
+				$response = array("status"=>false,"message"=>"Record not saved");
+			}
+			
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		
+		echo json_encode($response);
+	}
+   /*
+     * Methodname:  BookMachine
+     * Date created: September 27,2017
+	 * Created by   : Dharmendra Parmar 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+        
+        public function BookMachine(){
+	
+		if ($this->input->get_post('machineId') || $this->input->get_post('userId') || $this->input->get_post('userType') || $this->input->get_post('bookingDate') || $this->input->get_post('bookingFrom')|| $this->input->get_post('bookingTo')|| $this->input->get_post('employeeName')||$this->input->get_post('employeeCode')||$this->input->get_post('companyId')) {
+			//$ret = $this->version1_model->BookMachine('1','1','admin','02/02/1989','02/02/1989' //,'02/02/1989','dfdfd','fd','1');
+                        $ret = $this->version1_model->BookMachine($this->input->get_post('machineId') , $this->input->get_post('userId') , $this->input->get_post('userType') , $this->input->get_post('bookingDate') , $this->input->get_post('bookingFrom') , $this->input->get_post('bookingTo') , $this->input->get_post('employeeName'),$this->input->get_post('employeeCode') , $this->input->get_post('companyId'));
+                        echo $ret;
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success");
+			}else{
+				$response = array("status"=>false,"message"=>"Record not saved");
+			}
+			
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		
+		echo json_encode($response);
+	}
+        
+        /*
+     * Methodname:  getTattleDetails
+     * Date created: September 28,2017
+	 * Created by   : Monika Kumari 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+        public function getTattleDetails(){
+            if ($this->input->get_post('categoriesList')) {
+            $ret = $this->version1_model->getTattleDetails();
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success","tattleList"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not found");
+			}
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		echo json_encode($response);	
+	}
+        /*
+     * Methodname:  getUserDetails
+     * Date created: September 28,2017
+	 * Created by   : Monika Kumari 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+         public function getUserDetails(){
+            if ($this->input->get_post('userid')) {
+            $ret = $this->version1_model->getUserDetails();
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success","UserList"=>$ret);
+			}else{
+				$response = array("status"=>false,"message"=>"Record not found");
+			}
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		echo json_encode($response);	
+	}
+        /*
+     * Methodname:  createTattle
+     * Date created: September 27,2017
+	 * Created by   : Monika Kumari 
+     * Purpose: This function will be used to check api 
+     * InputParams and Type: none  
+     * OutputParams and Type: none
+    */
+        
+        public function createAddress(){
+		if ($this->input->get_post('email')&& $this->input->get_post('anonymousStatus')&& $this->input->get_post('occupation')&&  $this->input->get_post('favCategoriesId')&&$this->input->get_post('dob')&& $this->input->get_post('gendar') && $this->input->get_post('userId') && $this->input->get_post('contactNo')&& $this->input->get_post('address') && $this->input->get_post('cityId') && $this->input->get_post('stateId') && $this->input->get_post('countryId')&& $this->input->get_post('pinCode')&& $this->input->get_post('contactNo2')&& $this->input->get_post('address2') && $this->input->get_post('cityId2') && $this->input->get_post('stateId2') && $this->input->get_post('countryId2')&& $this->input->get_post('pinCode2')&& $this->input->get_post('contactNo3')&& $this->input->get_post('address3') && $this->input->get_post('cityId3') && $this->input->get_post('stateId3') && $this->input->get_post('countryId3')&& $this->input->get_post('pinCode3')) {
+		//	$ret = $this->version1_model->createAddress('1','73488677867','pune','1','1' ,'1','400026','abc@gmail.com','1','developer','1','6 feb','female','1','98575','pune','1','1','1','56676455','1','6 feb','female','1676','9878575','pune','1','1','1','56455');
+                        $ret = $this->version1_model->createAddress($this->input->get_post('email'), $this->input->get_post('anonymousStatus'), $this->input->get_post('occupation'), $this->input->get_post('favCategoriesId'),$this->input->get_post('dob'), $this->input->get_post('gendar'),$this->input->get_post('userId') , $this->input->get_post('contactNo'), $this->input->get_post('address') , $this->input->get_post('cityId') , $this->input->get_post('stateId') , $this->input->get_post('countryId'), $this->input->get_post('pinCode'),$this->input->get_post('contactNo2'), $this->input->get_post('address2') , $this->input->get_post('cityId2') , $this->input->get_post('stateId2') , $this->input->get_post('countryId2'), $this->input->get_post('pinCode2'), $this->input->get_post('contactNo3'), $this->input->get_post('address3') , $this->input->get_post('cityId3') , $this->input->get_post('stateId3') , $this->input->get_post('countryId3'), $this->input->get_post('pinCode3')
+                         );
+			if($ret){
+				$response = array("status"=>true,"message"=>"Success");
+			}else{
+				$response = array("status"=>false,"message"=>"Record  saved");
+			}
+			
+		}else{
+			$response = array("status"=>false,"message"=>"Required parameter not found");
+		}
+		
+		echo json_encode($response);
+	}
+}
+
+
